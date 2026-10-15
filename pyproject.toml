@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "open-gene-literature"
+version = "0.2.0"
+description = "Human gene literature reports with auditable HGNC and Europe PMC sources"
+requires-python = ">=3.10"
+dependencies = ["requests>=2.31,<3"]
+
+[project.scripts]
+gene-literature = "gene_literature:main"
+
+[project.gui-scripts]
+gene-literature-gui = "gene_literature_gui:main"
+
+[tool.setuptools]
+py-modules = ["gene_literature", "gene_literature_gui"]
